@@ -2,12 +2,12 @@
 # ToyRobot
 Python version: 3.8.10
 
-Packages: pytest
+Packages: pytest, pytest-cov
 
 
 
 # Usage
-Run the app.py file
+Run the main.py file
 
 Execute the commands
 
@@ -34,8 +34,24 @@ At anytime you can type "exit" to exit the app
 
 
 # Test
-pytest package must be installed
+Run the command:
 
-Run the command: python -m pytest /path/to/test.py
+    python -m pytest --cov . tests/
 
-(Optional) Add more cases to the test_cases variable in the test.py file
+or for html report:
+
+    python -m pytest --cov . --cov-report html:tests/coverage tests/
+
+(Optional) Add more cases to the test_cases variable in the tests/test_robot.py file
+
+
+# Run the app using docker
+- Build the image:
+ 
+        docker build -t toy-robot-app:1.0
+
+- Create container using the image:
+
+        docker run -it toy-robot-app:1.0
+        
+- execute your commands
