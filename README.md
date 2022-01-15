@@ -48,7 +48,7 @@ or for html report:
 # Run the app using docker
 - Build the image:
  
-        docker build -t toy-robot-app:1.0
+        docker build -t toy-robot-app:1.0 .
 
 - Create container using the image:
 
