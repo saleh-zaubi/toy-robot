@@ -9,8 +9,8 @@ class East(Direction):
         self._direction = "east"
         self._adjusment = {"x" : 1, "y": 0}
 
-    def left(self) -> None:
+    def left(self) -> Direction:
         return north.North()
 
-    def right(self) -> None:
+    def right(self) -> Direction:
         return south.South()
