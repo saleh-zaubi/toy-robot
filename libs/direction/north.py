@@ -6,8 +6,8 @@ import libs.direction.west as west
 class North(Direction):
 
     def __init__(self) -> None:
-        self.direction = "north"
-        self.adjusment = {"x" : 0, "y": 1}
+        self._direction = "north"
+        self._adjusment = {"x" : 0, "y": 1}
 
     def left(self) -> Direction:
         return west.West()

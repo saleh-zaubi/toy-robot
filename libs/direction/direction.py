@@ -8,19 +8,19 @@ class Direction(ABC):
 
     @property
     def direction(self) -> str:
-        return self._direction
+        return self.__direction
 
     @direction.setter
-    def direction(self, dir: str) -> None:
-        self._direction = dir
+    def _direction(self, dir: str) -> None:
+        self.__direction = dir
 
     @property
     def adjusment(self) -> dict:
-        return self._adjusment
+        return self.__adjusment
 
     @adjusment.setter
-    def adjusment(self, adjustment: dict) -> None:
-        self._adjusment = adjustment
+    def _adjusment(self, adjustment: dict) -> None:
+        self.__adjusment = adjustment
 
     @abstractmethod
     def left(self) -> None:
